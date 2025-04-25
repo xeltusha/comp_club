@@ -16,12 +16,22 @@ public class Place {
 
     public static void registration(){
         Scanner input = new Scanner(System.in);
+        System.out.println("Write the time of session: ");
+        int time = input.nextInt();
+        System.out.println("Write the amount of free places: ");
+        int free_place_count = input.nextInt();
         System.out.println("Enter the type of place: 1) Basic;\n2) VIP;\n3) Console.");
         int registration_option = input.nextInt();
         switch (registration_option){
-            case 1:
-            case 2:
-            case 3:
+            case 1: Basic b1 = new Basic(1, time, free_place_count);
+            case 2: System.out.println("Does the client want the 240Hz monitor?");
+            boolean dvestisorok_hz = input.nextBoolean();
+                VIP v1 = new VIP(1, time, free_place_count, dvestisorok_hz);
+            case 3: System.out.println("How many gamepads are required for client?");
+            int gamepad_count = input.nextInt();
+            System.out.println("Is there free sofa nearby the console?");
+            boolean free_sofa = input.nextBoolean();
+            Console c1 = new Console(1, time, free_place_count, gamepad_count, free_sofa);
         }
     }
 
