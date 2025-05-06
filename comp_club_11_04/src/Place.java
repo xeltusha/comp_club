@@ -24,12 +24,12 @@ public class Place {
         int registration_option = input.nextInt();
         switch (registration_option){
             case 1: Basic b1 = new Basic(1, time, free_place_count);
-            case 2: System.out.println("Does the client want the 240Hz monitor?");
+            case 2: System.out.println("Does You want the 240Hz monitor?");
             boolean dvestisorok_hz = input.nextBoolean();
                 VIP v1 = new VIP(1, time, free_place_count, dvestisorok_hz);
-            case 3: System.out.println("How many gamepads are required for client?");
+            case 3: System.out.println("How many gamepads are required for You?");
             int gamepad_count = input.nextInt();
-            System.out.println("Is there free sofa nearby the console?");
+            System.out.println("Do you want to take your place on a free sofa nearby the console?");
             boolean free_sofa = input.nextBoolean();
             Console c1 = new Console(1, time, free_place_count, gamepad_count, free_sofa);
         }
@@ -50,7 +50,7 @@ public class Place {
 
     public static void option(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number of option:\n1) Registrate new client:\n2) Show the info about the client:\n3) Get the clients' extract in one file:\n4) Exit out the program.");
+        System.out.println("Enter the number of option:\n1) Registrate new client:\n2) Show the info about the client:\n3) Get the clients' extract in one file:\n4) Do nothing and exit out the program.");
         int option = input.nextInt();
         switch (option){
             case 1: registration();
