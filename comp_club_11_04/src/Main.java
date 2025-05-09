@@ -2,6 +2,13 @@ import javax.swing.*;
 
 public class Main extends JFrame {
     private JPanel jform;
+    private JComboBox comboBox1;
+    private JButton calculateThePriceButton;
+    private JTextField textField1;
+    private JTextArea welcomeToComputerClubTextArea;
+    private JTextArea chooseTheTypeOfTextArea;
+    private JTextArea textArea3;
+
     Main(){
         setContentPane(jform);
         setTitle("Computer Club");
